@@ -1,6 +1,6 @@
 {
   "name": "gpx2fit",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "fit encoder, gpx to fit",
   "keywords": ["fit", "gpx", "garmin", "encode", "typescript"],
   "main": "lib/index.js",
@@ -12,7 +12,6 @@
   "author": "trustao@yeah.net",
   "license": "ISC",
   "devDependencies": {
-    "@rollup/plugin-typescript": "^8.2.1",
     "rollup": "^2.50.1",
     "rollup-plugin-typescript2": "^0.30.0",
     "tslib": "^2.2.0",
