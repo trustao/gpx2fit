@@ -1,14 +1,15 @@
 {
   "name": "gpx2fit",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "fit encoder, gpx to fit",
+  "keywords": ["fit", "gpx", "garmin", "encode", "typescript"],
   "main": "output/index.js",
   "types": "output/index.d.ts",
   "scripts": {
     "dev": "rollup --config --watch",
     "build": "rollup --config"
   },
-  "author": "",
+  "author": "trustao@yeah.net",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-typescript": "^8.2.1",
