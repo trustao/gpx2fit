@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "fit encoder, gpx to fit",
   "keywords": ["fit", "gpx", "garmin", "encode", "typescript"],
-  "main": "output/index.js",
-  "types": "output/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "dev": "rollup --config --watch",
     "build": "rollup --config"
@@ -22,5 +22,5 @@
   "dependencies": {
     "node-html-parser": "^3.3.4"
   },
-  "files": ["output/**/*"]
+  "files": ["lib/**/*"]
 }

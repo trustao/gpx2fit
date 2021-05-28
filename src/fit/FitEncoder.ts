@@ -1,6 +1,5 @@
 import { FitMessage } from './FitMessage';
 import { crc } from './crc';
-import {Buffer} from 'buffer'
 
 const HEADER_LEN = 14;
 const PROTOCOL_VERSION = 0x10; // 1.0
