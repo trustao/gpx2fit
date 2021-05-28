@@ -54,7 +54,6 @@ function encodeFit(gpx: GPXInfo): FitEncoder {
     encoder.writeRecord(item);
   }
 
-  console.log(t, encoder);
 
   const totalTime = Math.round((finish.time - start.time) / 1000);
   const overview = {
@@ -76,7 +75,6 @@ function encodeFit(gpx: GPXInfo): FitEncoder {
     total_descent: gpx.eleLoss
   };
 
-  console.log(overview);
   encoder.writeEvent({
     timestamp: finish.time,
     event: 'timer',

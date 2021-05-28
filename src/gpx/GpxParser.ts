@@ -16,7 +16,6 @@ async function parseXml(xmlString: string) {
 
 
     const gpx = doc.querySelector('gpx');
-    console.log(gpx)
     if (gpx) {
       resolve(gpx)
     } else {
