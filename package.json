@@ -1,8 +1,14 @@
 {
   "name": "gpx2fit",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "fit encoder, gpx to fit",
-  "keywords": ["fit", "gpx", "garmin", "encode", "typescript"],
+  "keywords": [
+    "fit",
+    "gpx",
+    "garmin",
+    "encode",
+    "typescript"
+  ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
@@ -12,14 +18,17 @@
   "author": "trustao@yeah.net",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^15.6.1",
     "rollup": "^2.50.1",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "tslib": "^2.2.0",
-    "typescript": "^4.2.4",
-    "@types/node": "^15.6.1"
+    "typescript": "^4.2.4"
   },
   "dependencies": {
     "node-html-parser": "^3.3.4"
   },
-  "files": ["lib/**/*"]
+  "files": [
+    "lib/**/*"
+  ]
 }

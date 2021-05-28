@@ -1,4 +1,5 @@
 import typescript from 'rollup-plugin-typescript2';
+import { terser } from "rollup-plugin-terser";
 
 export default {
   input: ['src/index.ts', "src/output.ts"],
@@ -6,5 +7,8 @@ export default {
     dir: 'lib',
     format: 'cjs'
   },
-  plugins: [typescript({lib: ["es5","es6","es7","es8", "es9", "dom"], target: "es5"})]
+  plugins: [
+    typescript(),
+    terser()
+  ]
 };
