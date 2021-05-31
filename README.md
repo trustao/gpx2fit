@@ -1,5 +1,13 @@
 # GPX to FIT
 
+Fit file encoder.
+
+## Install
+
+```
+npm i gpx2fit
+```
+
 ## usage
 
 #### node
@@ -31,8 +39,8 @@ gpx2fitEncoder(gpxString).then(encoder => outputFile(encoder, 'fileName'));
 import {gpx2fitEncoder} from 'gpx2fit'
 import {outputFile} from 'gpx2fit/lib/output'
 
-const encoder = gpx2fitEncoder(gpxString);
-outputFile(encoder, 'file');
+const encoder = gpx2fitEncoder(gpxString)
+outputFile(encoder, 'file')
 ```
 
 #### FitEncoder
@@ -41,7 +49,7 @@ outputFile(encoder, 'file');
 ```javascript
 import {FitEncoder} from 'gpx2fit'
 
-const encoder = new FitEncoder();
+const encoder = new FitEncoder()
 encoder.writeMessage('record', {
     altitude: 31.6,
     cadence: 67,
@@ -52,12 +60,7 @@ encoder.writeMessage('record', {
     speed: 5.963,
     temperature: 20,
     timestamp: 1620512424000,
-  });
-encoder.header
-encoder.trailer
-encoder.msgBuffers
-encoder.dataArrayBuffer
-encoder.createBlob()
+  })
 ```
 * createBlob: () => Blob; *only web*
 
