@@ -39,8 +39,7 @@ gpx2fitEncoder(gpxString).then(encoder => outputFile(encoder, 'fileName'));
 import {gpx2fitEncoder} from 'gpx2fit'
 import {outputFile} from 'gpx2fit/lib/output'
 
-const encoder = gpx2fitEncoder(gpxString)
-outputFile(encoder, 'file')
+gpx2fitEncoder(gpxString).then(encoder => outputFile(encoder, 'file'))
 ```
 
 #### FitEncoder
@@ -70,3 +69,8 @@ fit file ArrayBuffer;
 * header: ArrayBuffer
 * trailer: ArrayBuffer
 * msgBuffers: ArrayBuffer[]
+
+-----
+
+original author：  
+[Nick Holloway](https://gitlab.com/nwholloway/fit-route)

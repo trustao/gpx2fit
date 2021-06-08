@@ -11,7 +11,7 @@ function encodeFit(gpx: GPXInfo): FitEncoder {
   const finish = gpx.points[gpx.points.length - 1];
 
   const encoder = new FitEncoder();
-  encoder.writeFileId({ type: 'activity', time_created: start.time });
+  encoder.writeFileId({type: 'activity', time_created: start.time});
 
   encoder.writeEvent({
     timestamp: start.time,
@@ -20,13 +20,13 @@ function encodeFit(gpx: GPXInfo): FitEncoder {
     event_group: 0
   });
 
-  let prev: Record<string, any> = { distance: 0, time: start.time };
+  let prev: Record<string, any> = {distance: 0, time: start.time};
   let maxS = 0;
   let movingT = 0;
   let minA = Infinity;
   let maxA = -Infinity;
   const t = [];
-  for (let { lat, lon, ele, time, distance, speed, heart_rate, cadence, temperature } of gpx.points) {
+  for (let {lat, lon, ele, time, distance, speed, heart_rate, cadence, temperature} of gpx.points) {
     speed = speed || 0;
     const dur = Math.round((time - prev.time) / 1000);
     if (!speed && dur > 0) {
@@ -38,7 +38,7 @@ function encodeFit(gpx: GPXInfo): FitEncoder {
     maxS = speed > maxS ? speed : maxS;
     minA = ele < minA ? ele : minA;
     maxA = ele > maxA ? ele : maxA;
-    prev = { lat, lon, ele, time, distance, speed };
+    prev = {lat, lon, ele, time, distance, speed};
     const item = {
       timestamp: time,
       position_lat: lat,
@@ -83,7 +83,7 @@ function encodeFit(gpx: GPXInfo): FitEncoder {
   });
 
   encoder.writeMessage('lap', overview);
-  encoder.writeMessage('session', { ...overview, num_laps: 1, first_lap_index: 0 });
+  encoder.writeMessage('session', {...overview, num_laps: 1, first_lap_index: 0});
 
   encoder.writeMessage('activity', {
     'timestamp': finish.time,

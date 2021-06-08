@@ -1,6 +1,6 @@
 {
   "name": "gpx2fit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "fit encoder, gpx to fit",
   "keywords": [
     "fit",
@@ -30,5 +30,10 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:trustao/gpx2fit.git"
+  },
+  "homepage": "https://github.com/trustao/gpx2fit"
 }
